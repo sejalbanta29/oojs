@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sejal ={
+  name :'Sejal',
+age: 23,
+ };  
+ const shriya ={
+  name :'Shriya',
+age: 29,
+ };
+ function greeting() {
+ console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+}
+const greetingSejal = greeting.bind(sejal);
+
+// Hi, I am Sejal and I am 23 years old
+greetingSejal();
+
+const greetingShriya = greeting.bind(shriya);
+
+// Hi, I am Shriya and I am 29 years old
+greetingShriya();
+
+greeting.call(sejal);
+greeting.call(shriya);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s = [1,2,3,4,5];
+        // for(i=0;i<say.length;i++){
+        //     task(i);
+        // }
+        // function task(i){
+        //     setTimeout(function(){
+        //         console.log(say[i]);
+        //     }
+        // }
+        var s = [1,2,3,4,5];
+var i = 0;
+
+(function loop() {
+    console.log(s[i]);
+   
+    if (++i < s.length) {
+        setTimeout(loop, 3000);
+    }
+})();
+
+    </script>
+</body>
+</html>

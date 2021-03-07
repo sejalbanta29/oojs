@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var invocation_count=0;
+var instance_count=0;
+function person(fname,lname){
+    this.fname=fname;
+    this.lname=lname;
+    instance_count+=1;
+}
+person.prototype.getFull = function(){
+    invocation_count+=1;
+    return this.fname + " " + this.lname;
+};
+var p1= new person("Sejal","Banta");
+var p2= new person("Venya","Banta");
+var p3= new person("Shriya","Banta");
+console.log(p1.getFull());
+console.log(p2.getFull());
+console.log("No. of function Invocation: ",invocation_count);
+console.log("No. of Instances: ",instance_count);
+
+    </script>
+</body>
+</html>
